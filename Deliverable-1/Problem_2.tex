@@ -1,0 +1,147 @@
+\documentclass[11pt,a4paper,twoside]{article}
+
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{enumitem}
+\usepackage{geometry}
+
+% Page Layout
+\geometry{
+  a4paper,
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=3cm,
+  headheight=15pt,
+  headsep=0.3cm,
+  footskip=1cm
+}
+
+\begin{document}
+
+% Title Block
+\begin{center}
+{\Large \bfseries PROBLEM-2} \\[0.2cm]
+{\bfseries Name:} Jayanth Apagundi \hfill {\bfseries ID:} 40291184 \\[0.1cm]
+{\bfseries SOEN 6011: Software Engineering Processes} \hfill {\bfseries Date:} 13 July 2025
+\end{center}
+
+\section*{Requirements}
+
+\begin{itemize}[leftmargin=0pt,label={}]
+\item \textbf{- Requirement 1}
+\begin{itemize}
+\item \textbf{Identification:} FR1
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} High
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall accept an angle input from the user as a real number.
+\item \textbf{Rationale:} To enable computation of $\tan(x)$ based on user-provided angle value.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 2}
+\begin{itemize}
+\item \textbf{Identification:} FR2
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} High
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall allow the user to specify the unit of the input angle as degrees or radians by entering ‘d’ or ‘r’.
+\item \textbf{Rationale:} To let the user input the angle in their preferred unit and handle conversions appropriately.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 3}
+\begin{itemize}
+\item \textbf{Identification:} FR3
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} Medium
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall convert the input angle from degrees to radians if the user specifies degrees.
+\item \textbf{Rationale:} Trigonometric functions in Java work with radians; hence conversion is necessary.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 4}
+\begin{itemize}
+\item \textbf{Identification:} FR4
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} High
+\item \textbf{Risk:} Medium
+\item \textbf{Description:} The program shall compute $\tan(x)$ of the input angle and display the result.
+\item \textbf{Rationale:} To provide the main functionality of calculating tangent.
+\item \textbf{Difficulty:} Medium
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 5}
+\begin{itemize}
+\item \textbf{Identification:} FR5
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} High
+\item \textbf{Risk:} Medium
+\item \textbf{Description:} The program shall detect and display an appropriate message if $\tan(x)$ is undefined.
+\item \textbf{Rationale:} To avoid displaying invalid or infinite results to the user.
+\item \textbf{Difficulty:} Medium
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 6}
+\begin{itemize}
+\item \textbf{Identification:} FR6
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} Medium
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall display an error message if the unit specified is neither ‘d’ nor ‘r’.
+\item \textbf{Rationale:} To guide the user to enter a valid unit and prevent incorrect behavior.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 7}
+\begin{itemize}
+\item \textbf{Identification:} NFR1
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} Medium
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall display the result of the calculation within 1 second after the user enters valid input.
+\item \textbf{Rationale:} To ensure good performance and user satisfaction by providing timely results.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Non-Functional Requirement
+\end{itemize}
+
+\item \textbf{- Requirement 8}
+\begin{itemize}
+\item \textbf{Identification:} NFR2
+\item \textbf{Version Number:} 1.0.0
+\item \textbf{Owner:} Jayanth Apagundi
+\item \textbf{Stakeholder Priority:} High
+\item \textbf{Risk:} Low
+\item \textbf{Description:} The program shall provide clear and understandable prompts and error messages to guide the user through the input process.
+\item \textbf{Rationale:} To improve usability and reduce user errors by making the interface user-friendly.
+\item \textbf{Difficulty:} Easy
+\item \textbf{Type:} Non-Functional Requirement
+\end{itemize}
+
+\end{itemize}
+
+\section*{Assumptions}
+\begin{itemize}
+\item The user inputs a valid real number for the angle; no validation is done for non-numeric input.
+\item The user specifies the unit correctly as either ‘d’ (degrees) or ‘r’ (radians); any other input is treated as invalid.
+\item The calculator is operated in a console environment that supports standard input/output (e.g., terminal, command prompt).
+\end{itemize}
+
+\end{document}

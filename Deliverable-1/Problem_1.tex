@@ -1,0 +1,122 @@
+\documentclass[11pt,a4paper,twoside]{article}
+
+\usepackage[dutch]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{graphicx}
+\usepackage{float,flafter}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[sorting=none]{biblatex}
+\usepackage{tabularx}
+\addbibresource{problem1ref.bib}
+
+% Page Layout
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  top=2.5cm,
+  bottom=2.5cm,
+  left=3cm,
+  right=3cm,
+  headheight=15pt,
+  headsep=0.3cm,
+  footskip=1cm
+}
+
+% Section Styling
+\usepackage{sectsty}
+\sectionfont{\normalfont\large\bfseries}
+\subsectionfont{\normalfont\normalsize\bfseries}
+
+\begin{document}
+
+% Title Block
+\begin{center}
+{\Large \bfseries PROBLEM-1} \\[0.2cm]
+{\bfseries Name:} Jayanth Apagundi \hfill {\bfseries ID:} 40291184 \\[0.1cm]
+{\bfseries SOEN 6011: Software Engineering Processes} \hfill {\bfseries Date:} 13 July 2025
+\end{center}
+
+\section{Description}
+The function $\tan(x)$ is short for the tangent function, which is one of trigonometric functions (also called circular functions), which are real functions which relate an angle of a right-angled triangle to ratios of two side lengths. And it's widely used in all sciences that are related to geometry.
+
+\subsection{Domain and Co-domain of $\tan(x)$}
+\begin{enumerate}
+\item 
+\textbf{Domain}: $x$: all real numbers except the values where $x = \pi /2+k\pi, k\in \mathbb{Z}$ (Since $\tan(x)=\sin(x)/\cos(x)$, $\cos(x)=0$ when $x = \pi /2+k\pi, k\in \mathbb{Z}$. If $\cos(x)=0$, $\tan(x)$ will be undefined).
+\item 
+\textbf{Co-domain}: $y$: all real numbers, $\mathbb{R}$ (In mathematics, the co-domain of a function is the set into which all of the output of the function is constrained to fall)
+\end{enumerate}
+
+\subsection{Characteristics of $\tan(x)$}
+\begin{enumerate}
+\item $\tan(x)=\sin(x)/\cos(x)$
+\item Period: $\pi$ (For any given $x$, $\tan(y)=\tan(x)$ if $y = x + k\pi, k \in \mathbb{Z}$)
+\item $x\rightarrow \pi /2+k\pi, k\in \mathbb{Z}$, $\tan(x)\rightarrow+\infty$
+\item $x\rightarrow3\pi/2+k\pi, k\in \mathbb{Z}$, $\tan(x)\rightarrow-\infty$
+\item The tangent function is an \textbf{odd function} because $\tan(-x) = -\tan(x)$.
+\item $\tan(x)$ is \textbf{not defined} at values of $x$ where $\cos(x) = 0$.
+\item The graph of $\tan(x)$ has an infinite number of \textbf{vertical asymptotes}.
+\item The graph of $\tan(x)$ is \textbf{symmetric with respect to the origin}.
+\item The $x$-intercepts of $\tan(x)$ occur where $\sin(x) = 0$, i.e., at $x = n\pi$, where $n$ is an integer.
+\item Values of the tangent function at specific angles:
+  \begin{itemize}
+  \item $\tan 0 = 0$
+  \item $\tan \pi/6 = \frac{1}{\sqrt{3}}$
+  \item $\tan \pi/4 = 1$
+  \item $\tan \pi/3 = \sqrt{3}$
+  \item $\tan \pi/2 = $ Not defined
+  \end{itemize}
+\item Trigonometric identities involving $\tan(x)$:
+  \begin{itemize}
+  \item $1 + \tan^2x = \sec^2x$
+  \item $\tan 2x = \frac{2\tan x}{1 - \tan^2x}$
+  \item $\tan(a-b) = \frac{\tan a - \tan b}{1 + \tan a \tan b}$
+  \item $\tan(a+b) = \frac{\tan a + \tan b}{1 - \tan a \tan b}$
+  \end{itemize}
+\end{enumerate}
+
+\section{Context of Use Model}
+
+\renewcommand\labelenumi{2.\arabic{enumi}}
+\begin{enumerate}
+\item 
+\textbf{User}: A user who is planning to use a calculator to calculate the output of $\tan(x)$ with the input $x$.
+
+\vspace{0.3cm}
+
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Type of User} & \textbf{Skills/Knowledge} \\ \hline
+Students (school/college) & Basic to intermediate math, learning trigonometry \\ \hline
+Engineers & Advanced math knowledge, uses for design and analysis \\ \hline
+Teachers/Lecturers & Teaching trigonometric concepts \\ \hline
+General Users & Occasional need, low expertise \\ \hline
+\end{tabularx}
+
+\vspace{0.3cm}
+
+\item
+\textbf{Task}: 
+\begin{itemize}
+\item Compute the tangent of an angle given in degrees or radians
+\item Validate solutions or check work during exams/assignments
+\item Perform quick calculations in professional tasks
+\end{itemize}
+
+\item
+\textbf{Environment}:
+  \begin{itemize}
+  \item \textbf{Technical environment:} The calculator operates on hardware such as scientific calculators, smartphones, or computers, and software like apps, web calculators, or programming tools. Input is given via keypad, touchscreen, or keyboard, with output shown on an LCD or LED screen. The correct angle mode (degrees or radians) must be selected for accurate results. Power is supplied through batteries, solar cells, or plugged-in sources to ensure reliable operation.
+  \item \textbf{Non-technical environment:} Physically, the calculator is used in classrooms, exam halls, offices, or at home, depending on the user’s context. Socially, it supports both individual work and collaborative learning, as well as teacher-student interactions or teamwork in professional environments. These settings influence how users interact with the calculator and how critical accuracy and speed are in their tasks.
+  \end{itemize}
+\end{enumerate}
+
+\section*{References}
+\begin{itemize}
+\item Cuemath: \textit{Tangent Function - Properties, Graph, and Identities}. Available at: \url{https://www.cuemath.com/trigonometry/tangent-function/}
+\end{itemize}
+
+\end{document}
