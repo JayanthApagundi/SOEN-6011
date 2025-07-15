@@ -24,9 +24,9 @@ public class TanCalc {
             return;
         }
 
-        // Check if tan(x) is undefined (e.g., 90°, 270°, etc.)
-        double cosValue = Math.cos(angleInRadians);
-        if (Math.abs(cosValue) < 1e-10) {
+        // Check- tan(x) is undefined (i.e, for 90°, 270°, etc.)
+        double ValueOfCos = Math.cos(angleInRadians);
+        if (Math.abs(ValueOfCos) < 1e-10) {
             System.out.println("Not Defined !!!");
         } else {
             double ValueOfTan = Math.tan(angleInRadians);
