@@ -1,4 +1,4 @@
-# SOEN-6011  
+# SOEN-6011 (Eternity)
 **SEP – Project/Deliverables**  
 **Author:** Jayanth Apagundi  
 *Concordia University*   
@@ -139,7 +139,62 @@ This project uses **Checkstyle** with the **Google Java Style Guide** to ensure 
 **Reference:**
 [CheckStyle Guide](https://checkstyle.org/)
 
+---
 
+## 🐞 Debugging with JDB
+
+**Debugger Used:** Java Debugger (**JDB**)  
+**Reference:** [Official JDB Documentation](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/jdb.html)  
+
+As part of Deliverable 3, the project was debugged using **JDB** to validate runtime behavior, inspect variables, and step through execution flow for both **D1** (console-based) and **D2** (JavaFX GUI-based) implementations.  
+
+### D1 Debugging (Console Application)
+1. Compile with debugging information:  
+   ```bash
+   javac -g TanCalcD1.java Version.java
+   ```
+2. Start JDB and set a breakpoint:
+   ```bash
+   jdb com.example.sep.TanCalcD1 
+   stop at com.example.sep.TanCalcD1:32 
+   run
+   ```
+3. Inspect variables and step through code:
+   ```bash
+   print x
+   step
+   next
+   cont
+   ```
+   
+### D2 Debugging (GUI Application)
+1. Compile with JavaFX module path:
+   ```bash
+   javac -g \
+     --module-path ~/Downloads/javafx-sdk-24.0.2/lib \
+     --add-modules javafx.controls,javafx.fxml \
+     Version.java TrigCalculator.java TanCalcGuiD2.java TanLauncher.java
+   ```
+2. Start JDB for JavaFX application:
+   ```bash
+   jdb \
+     -classpath out \
+     -sourcepath src/main/java \
+     -J--module-path -J"$HOME/Downloads/javafx-sdk-24.0.2/lib" \
+     -J--add-modules -Jjavafx.controls,javafx.fxml \
+     com.example.sep.TanLauncher
+   ```
+3. Set breakpoints in GUI logic:
+   ```bash
+   stop in com.example.sep.TanCalcGuiD2.start
+   stop in com.example.sep.TrigCalculator.customTan
+   run
+   ```
+**Snapshots:**
+1. [D1- Console Application](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D1.png)
+2. [D2- GUI Application- 2.1](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.1.png)
+3. [D2- GUI Application- 2.2](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.2.png)
+   
 
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
