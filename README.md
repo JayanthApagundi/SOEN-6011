@@ -124,9 +124,21 @@ Key Rules Implemented:
 - Maximum line length: 100 characters  
 
 Reference:  
-https://checkstyle.org/styleguides/google-java-style-20220203/javaguide.html
+[Google Java Style](https://checkstyle.org/styleguides/google-java-style-20220203/javaguide.html)
 
 File: [Programming Style Screenshot](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/Programming_Style.png)
+
+## 🛠 Code Style Verification (Checkstyle)
+
+This project uses **Checkstyle** with the **Google Java Style Guide** to ensure consistent coding standards.
+
+**Proof of Conformance:**
+- [Initial Checkstyle Report (with warnings)](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/SEP_Checkstyle_Results_Before_2.pdf)
+- [Final Checkstyle Report (no warnings)](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/SEP_Checkstyle_Results_After_2.pdf)
+
+**Reference:**
+[CheckStyle Guide](https://checkstyle.org/)
+
 
 
 ## 📜 License  
