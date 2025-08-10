@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{titlesec}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+
+\setstretch{1.1}
+
+\title{User Interface Design Principles Evaluation for the TAN(x) Calculator GUI}
+\author{Jayanth Apagundi(40291184) | SOEN-6011:Eternity\quad Version:1.0.0}
+\date{}
+
+\begin{document}
+    \maketitle
+
+    The TAN(x) Calculator GUI was evaluated against seven established user interface design principles. For each principle, we provide a \textbf{Statement}, a \textbf{Description/Discussion}, and concrete \textbf{Examples} drawn from the current application.
+
+    \section{The Principle of User Profiling}
+    \noindent\textbf{Statement.}
+    The interface should reflect the target users' knowledge, experience, and goals.
+
+    \noindent\textbf{Description/Discussion.}
+    The application targets learners and practitioners who need a quick $\tan(x)$ value without advanced configuration. The UI favors clarity over configurability: plain-language prompts, minimal steps, and familiar control types. No domain jargon is required (e.g., users need not manually convert degrees to radians).
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item Prompts such as ``Enter angle (x)'' and ``Select Unit'' are concise and novice-friendly.
+        \item The unit combo box (Degrees/Radians) avoids forcing users to know conversion formulas.
+        \item Error messages use plain language (e.g., ``Invalid input! Please enter a valid number.'').
+    \end{itemize}
+
+    \section{The Principle of Humility}
+    \noindent\textbf{Statement.}
+    The interface should stay out of the way and help users accomplish their task.
+
+    \noindent\textbf{Description/Discussion.}
+    The GUI is intentionally minimal: one input, one unit selector, one action button, and a results label. Visual noise (animations, banners, branding) is avoided. Guidance appears as unobtrusive prompt text, tooltips, and accessible text.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item A compact single-view layout with only essential components.
+        \item Context help via tooltips; no pop-ups or modal interruptions.
+        \item The window title and version label inform without distracting.
+    \end{itemize}
+
+    \section{The Principle of Metaphor}
+    \noindent\textbf{Statement.}
+    Use familiar concepts so users can transfer real-world knowledge.
+
+    \noindent\textbf{Description/Discussion.}
+    The calculator metaphor is preserved: enter a value, choose units, press ``Calculate,'' read the result. Standard controls (text field, combo box, button, label) behave predictably and mirror common calculator workflows.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item Unit selection mimics a physical calculator's degree/radian toggle.
+        \item The ``Calculate tan(x)'' button mirrors pressing an operation key.
+        \item Labels and prompts map directly to what appears on calculators and worksheets.
+    \end{itemize}
+
+    \section{The Principle of Feature Exposure}
+    \noindent\textbf{Statement.}
+    Core features should be visible and accessible without hunting.
+
+    \noindent\textbf{Description/Discussion.}
+    All primary functionality is on one screen: input, unit selection, action, and result. There are no hidden menus, tabs, or advanced dialogs for the core task. Users can complete the workflow at a glance.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item The angle input, unit dropdown, and calculate button are visible on launch.
+        \item Results appear immediately in a dedicated label beneath the controls.
+        \item No nested navigation is required to compute $\tan(x)$.
+    \end{itemize}
+
+    \section{The Principle of State Visualization}
+    \noindent\textbf{Statement.}
+    Make system state and outcomes visible at all times.
+
+    \noindent\textbf{Description/Discussion.}
+    Prompt text communicates the initial state (awaiting input); the result label reflects outcomes: success, missing unit, invalid input, or mathematically undefined cases. This reduces uncertainty and supports quick correction.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item If no unit is selected, the message ``Please select a unit (Degrees or Radians).'' appears.
+        \item Non-numeric input triggers ``Invalid input! Please enter a valid number.''
+        \item When $\cos(x) \approx 0$, an explicit error explains that $\tan(x)$ is undefined at that angle.
+    \end{itemize}
+
+    \section{The Principle of Coherence}
+    \noindent\textbf{Statement.}
+    Maintain consistency in terminology, layout, and behavior.
+
+    \noindent\textbf{Description/Discussion.}
+    The interface uses consistent spacing, capitalization, and tone. Field prompts, button text, and labels align semantically. Error handling is centralized in the result label to provide a single place to read system feedback.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item Uniform vertical spacing (\verb|VBox(10)|) and padding (\verb|Insets(20)|).
+        \item Consistent wording across prompt texts, tooltips, and messages.
+        \item A single result label communicates all outcomes, avoiding fragmented feedback.
+    \end{itemize}
+
+    \section{The Principle of Safety}
+    \noindent\textbf{Statement.}
+    Prevent errors where possible and support safe recovery when they occur.
+
+    \noindent\textbf{Description/Discussion.}
+    Input validation and exception handling prevent crashes and undefined behavior. Users can correct inputs without losing context. Mathematically undefined cases are intercepted and explained.
+
+    \noindent\textbf{Examples.}
+    \begin{itemize}
+        \item \verb|NumberFormatException| caught for non-numeric input; the app stays responsive.
+        \item \verb|ArithmeticException| caught when $\cos(x)$ is near zero; a clear message is shown.
+        \item Users can re-enter a value, change units, and press ``Calculate'' again without restarting.
+    \end{itemize}
+
+
+\end{document}
