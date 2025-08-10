@@ -319,7 +319,7 @@ This codebase follows **Semantic Versioning**: `MAJOR.MINOR.PATCH`.
     ```
 - Shown in UI:
   - **D1 (Console):** printed as `Calculator Version: X.Y.Z`<br>
-    <img width="239" height="127" alt="image" src="https://github.com/user-attachments/assets/eaf531f6-7fc3-44c7-9869-a3253ffec4e3" /> <br>
+    <img width="239" height="144" alt="image" src="https://github.com/user-attachments/assets/2adc0c3d-0e01-4c02-b980-ed70528c8c87" /> <br>
   - **D2 (GUI):** window title `TAN(x) CALCULATOR vX.Y.Z` <br>
     <img width="329" height="317" alt="image" src="https://github.com/user-attachments/assets/d89e5374-b362-4ff2-8f45-c3a849849ada" /> <br>
 
