@@ -27,7 +27,7 @@ public class TanCalcD1 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Calculator Version: " + Version.getVersion());
+    System.out.println("Calculator:TAN(x) v:" + Version.getVersion());
     System.out.print("Enter the angle (x): ");
     double x = scanner.nextDouble();
 
