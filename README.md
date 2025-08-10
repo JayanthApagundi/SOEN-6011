@@ -247,6 +247,40 @@ This integration ensures PMD runs automatically as part of the Maven build lifec
 
 **File:** [TanCalcGuiD2.java](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/src/main/java/com/example/sep/TanCalcGuiD2.java)
 
+## 🧪 Unit Testing (JUnit 5)
+
+**Test files:**
+- `src/test/java/com/example/sep/TrigCalculatorTest.java`
+  - Verifies `sin(π/2) ≈ 1`, `cos(0) ≈ 1`, `tan(π/4) ≈ 1`
+  - Ensures `customTan(π/2)` throws `ArithmeticException`
+- `src/test/java/com/example/sep/TanCalcD1Test.java`
+  - Simulates stdin/stdout to test console flows:
+    - Degrees vs. Radians
+    - Undefined cases (cos(x) ≈ 0)
+    - Invalid mode handling
+
+**Run all tests:**
+```bash
+mvn -q test
+```
+
+**Run single test class:**
+```bash
+mvn -q -Dtest=TrigCalculatorTest test
+```
+or
+```bash
+mvn -q -Dtest=TanCalcD1Test test
+```
+
+**Style & quality:**
+- Tests follow Google Java Style (checked by Checkstyle).
+- No wildcard imports; methods documented with JavaDocs.
+- PMD runs on test sources as part of the Maven reports.
+
+**Troubleshooting:**
+- If Maven warns about module path with JDK 22 during tests, ensure maven-surefire-plugin is set (e.g., useModulePath=false) in pom.xml.
+- For flaky console I/O assertions, confirm locale/format (tests expect US-style decimals).
 
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
