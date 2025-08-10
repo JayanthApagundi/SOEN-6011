@@ -85,5 +85,49 @@ A GUI-based application using **JavaFX** to compute `tan(x)`. Includes:
 
 ---
 
+## 🛠 Deliverable-3: Code Quality Enhancements & Standards Compliance  
+
+**Description:**  
+Deliverable 3 focuses on improving and standardizing the existing **Deliverable-1 (console)** and **Deliverable-2 (GUI)** codebases to comply with established programming standards, debugging practices, and static analysis requirements.  
+
+**Key Improvements:**  
+- Adopted **Google Java Style** across all source files  
+- Added missing JavaDocs for classes and methods  
+- Configured **Checkstyle** to scan both main and test files  
+- Implemented **Semantic Versioning** in `Version.java`  
+- Used **JUnit 5** for unit testing (both console and GUI components)  
+- Applied **PMD** for static code analysis and resolved violations  
+- Debugged applications using **JDB (Java Debugger)**
+- Ensured GUI adheres to  User Interface Design Principles. 
+- Ensured GUI accessibility compliance **(Java Accessibility API)** 
+
+**Execution Steps:**  
+
+### Run Console Version (TanCalcD1)  
+```bash
+mvn exec:java -Dexec.mainClass="com.example.sep.TanCalcD1"
+```
+
+###Run JavaFX GUI Version (TanCalcGuiD2)
+```bash
+mvn javafx:run -DmainClass=com.example.sep.TanCalcGuiD2
+```
+
+## 🎯 Programming Style  
+
+Chosen Style: Google Java Style  
+
+Key Rules Implemented:  
+- Indentation: 2 spaces  
+- Method names in camelCase  
+- Braces at the end of the line (`} else {`)  
+- Maximum line length: 100 characters  
+
+Reference:  
+https://checkstyle.org/styleguides/google-java-style-20220203/javaguide.html
+
+File: [Programming Style Screenshot](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/Programming_Style.png)
+
+
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
