@@ -300,5 +300,39 @@ Detailed rationale with statements, discussion, and examples from the code are i
 - The Principle of **Safety**
 
 
+## 🔢 Semantic Versioning (SemVer)
+
+This codebase follows **Semantic Versioning**: `MAJOR.MINOR.PATCH`.  
+**Reference:** https://semver.org/
+
+**Where version is defined**
+- Code: `src/main/java/com/example/sep/Version.java`
+  - Example:
+    ```java
+    public static final int MAJOR = 1;
+    public static final int MINOR = 0;
+    public static final int PATCH = 0;
+
+    public static String getVersion() {
+      return MAJOR + "." + MINOR + "." + PATCH;
+    }
+    ```
+- Shown in UI:
+  - **D1 (Console):** printed as `Calculator Version: X.Y.Z`<br>
+    <img width="239" height="127" alt="image" src="https://github.com/user-attachments/assets/eaf531f6-7fc3-44c7-9869-a3253ffec4e3" /> <br>
+  - **D2 (GUI):** window title `TAN(x) CALCULATOR vX.Y.Z` <br>
+    <img width="329" height="317" alt="image" src="https://github.com/user-attachments/assets/d89e5374-b362-4ff2-8f45-c3a849849ada" /> <br>
+
+
+**Change log**
+- `CHANGELOG.md` tracks all notable changes per release (Keep a Changelog style).  
+  Latest entry starts at **1.0.0**.
+
+**Bump rules**
+- **MAJOR** – breaking API changes (incompatible behavior)
+- **MINOR** – new functionality, backward compatible
+- **PATCH** – bug fixes and small backward-compatible tweaks
+
+
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
