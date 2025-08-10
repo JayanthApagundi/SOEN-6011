@@ -1,5 +1,5 @@
 # SOEN-6011 (Eternity)
-**SEP – Project/Deliverables**  
+ 
 **Author:** Jayanth Apagundi  
 *Concordia University*   
 
@@ -108,14 +108,14 @@ Deliverable 3 focuses on improving and standardizing the existing **Deliverable-
 mvn exec:java -Dexec.mainClass="com.example.sep.TanCalcD1"
 ```
 
-###Run JavaFX GUI Version (TanCalcGuiD2)
+### Run JavaFX GUI Version (TanCalcGuiD2)
 ```bash
 mvn javafx:run -DmainClass=com.example.sep.TanCalcGuiD2
 ```
 
 ## 🎯 Programming Style  
 
-Chosen Style: Google Java Style  
+**Chosen Style:** Google Java Style  
 
 Key Rules Implemented:  
 - Indentation: 2 spaces  
@@ -130,7 +130,18 @@ File: [Programming Style Screenshot](https://github.com/JayanthApagundi/SOEN-601
 
 ## 🛠 Code Style Verification (Checkstyle)
 
-This project uses **Checkstyle** with the **Google Java Style Guide** to ensure consistent coding standards.
+**Tool Used:** [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) with **Google Java Style**, -This project uses **Checkstyle** with the **Google Java Style Guide** to ensure consistent coding standards.
+
+**Execution Steps:**
+1. Ensure Maven is installed and available in your environment.
+2. From the project root, run PMD analysis:
+   ```bash
+   mvn checkstyle:checkstyle
+   ```
+3. After running, the HTML report can be found at:
+   ```
+   target/site/checkstyle.html
+   ```
 
 **Proof of Conformance:**
 - [Initial Checkstyle Report (with warnings)](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/SEP_Checkstyle_Results_Before_2.pdf)
@@ -194,7 +205,34 @@ As part of Deliverable 3, the project was debugged using **JDB** to validate run
 1. [D1- Console Application](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D1.png)
 2. [D2- GUI Application- 2.1](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.1.png)
 3. [D2- GUI Application- 2.2](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.2.png)
-   
+
+## 🛠️ Static Code Analysis (PMD via Maven)
+
+**Description:**  
+The Maven PMD Plugin was used to scan both **main** and **test** Java files for potential code issues such as unused variables, empty catch blocks, and complexity violations.  
+This integration ensures PMD runs automatically as part of the Maven build lifecycle, helping maintain consistent code quality.
+
+**Execution Steps:**
+1. Ensure Maven is installed and available in your environment.
+2. From the project root, run PMD analysis:
+   ```bash
+   mvn pmd:check
+   ```
+   or to generate a full HTML report:
+   ```bash
+   mvn pmd:pmd
+   ```
+3. After running, the HTML report can be found at:
+   ```
+   target/site/pmd.html
+   ```
+
+**Proof:**  
+- [PMD Results](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/SEP_PMD_Results.pdf) **0 violations**
+
+**Reference:**  
+[PMD Maven Plugin Documentation](https://maven.apache.org/plugins/maven-pmd-plugin/)
+
 
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
