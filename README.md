@@ -150,8 +150,6 @@ File: [Programming Style Screenshot](https://github.com/JayanthApagundi/SOEN-601
 **Reference:**
 [CheckStyle Guide](https://checkstyle.org/)
 
----
-
 ## 🐞 Debugging with JDB
 
 **Debugger Used:** Java Debugger (**JDB**)  
@@ -206,7 +204,7 @@ As part of Deliverable 3, the project was debugged using **JDB** to validate run
 2. [D2- GUI Application- 2.1](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.1.png)
 3. [D2- GUI Application- 2.2](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/JDB_SnapShot_D2.2.png)
 
-## 🛠️ Static Code Analysis (PMD via Maven)
+## 🛠️ Static Code Analysis (PMD)
 
 **Description:**  
 The Maven PMD Plugin was used to scan both **main** and **test** Java files for potential code issues such as unused variables, empty catch blocks, and complexity violations.  
@@ -232,6 +230,22 @@ This integration ensures PMD runs automatically as part of the Maven build lifec
 
 **Reference:**  
 [PMD Maven Plugin Documentation](https://maven.apache.org/plugins/maven-pmd-plugin/)
+
+## ♿ Accessibility (Java Accessibility API / JavaFX)
+
+**Reference:**  
+[Java Accessibility API](https://docs.oracle.com/en/java/javase/21/access/java-accessibility-overview.html#GUID-17F9FD40-E191-41CE-BCF9-D956F1EF5111__JAVAACCESSIBILITYAPI-98866269)
+
+**Changes Made(D2 – JavaFX):**
+- Associated visible labels to controls (`Label#setLabelFor(Node)`) for proper screen reader semantics.
+- Provided assistive descriptions via `setAccessibleText(...)` and `setAccessibleHelp(...)`.
+- Enabled keyboard-first usage:
+  - Logical tab order.
+  - Mnemonic on the calculate button (`setMnemonicParsing(true)` with “_Calculate tan(x)”) so **Alt+C** activates it.
+- Results area marked as **status** (`AccessibleRole.STATUS`) so screen readers announce updates.
+- Clear, plain-language error messages (invalid number, missing unit, undefined tan).
+
+**File:** [TanCalcGuiD2.java](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/src/main/java/com/example/sep/TanCalcGuiD2.java)
 
 
 ## 📜 License  
