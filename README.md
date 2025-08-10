@@ -282,5 +282,23 @@ mvn -q -Dtest=TanCalcD1Test test
 - If Maven warns about module path with JDK 22 during tests, ensure maven-surefire-plugin is set (e.g., useModulePath=false) in pom.xml.
 - For flaky console I/O assertions, confirm locale/format (tests expect US-style decimals).
 
+## 🎛️ User Interface Design Principles (GUI)
+
+This project’s JavaFX GUI was designed to follow core user interface principles.  
+Detailed rationale with statements, discussion, and examples from the code are included in the PDF and LaTeX sources.
+
+**Proof:**
+- [Adherence to User Interface Design Principles](https://github.com/JayanthApagundi/SOEN-6011/blob/main/SEP/User_Interface_Design_Principles/User_Interface_Design_Principles.pdf)
+
+**Principles covered:**
+- The Principle of **User Profiling**
+- The Principle of **Humility**
+- The Principle of **Metaphor**
+- The Principle of **Feature Exposure**
+- The Principle of **State Visualization**
+- The Principle of **Coherence**
+- The Principle of **Safety**
+
+
 ## 📜 License  
 This project is for educational purposes as part of the **SOEN-6011** course at **Concordia University.** 
