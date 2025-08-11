@@ -11,7 +11,12 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<junit.version>5.10.2</junit.version>  </properties>
+<junit.version>5.10.2</junit.version>
+
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
 
   <dependencies>
     <dependency>
@@ -99,7 +104,7 @@
         <version>3.21.2</version>
         <configuration>
           <printFailingErrors>true</printFailingErrors>
-          <targetJdk>17</targetJdk> <!-- match your Java version -->
+          <targetJdk>17</targetJdk>
           <failOnViolation>false</failOnViolation>
         </configuration>
         <executions>
@@ -131,7 +136,7 @@
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.21.2</version>
         <configuration>
-          <targetJdk>17</targetJdk> <!-- PMD doesn't support 22, use 17 -->
+          <targetJdk>17</targetJdk>
           <rulesets>
             <ruleset>category/java/bestpractices.xml</ruleset>
             <ruleset>category/java/codestyle.xml</ruleset>
